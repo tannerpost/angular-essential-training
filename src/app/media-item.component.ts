@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
+
 @Component({
   selector: 'mw-media-item',
   templateUrl: './media-item.component.html',
@@ -8,8 +9,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class MediaItemComponent {
   @Input() mediaItem;
   @Output() delete = new EventEmitter();
+  @Output() update = new EventEmitter();
 
   onDelete() {
     this.delete.emit(this.mediaItem);
+  }
+  onFav() {
+    this.mediaItem.isFavorite = !this.mediaItem.isFavorite  ;
+    this.update.emit(this.mediaItem);
   }
 }

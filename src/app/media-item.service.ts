@@ -36,6 +36,10 @@ export class MediaItemService {
     );
   }
 
+  put(mediaItem: MediaItem){
+    return this.http.put(`mediaitems/${mediaItem.id}`, mediaItem)
+    .pipe( catchError(this.handleError) );
+  }
   private handleError(error: HttpErrorResponse) {
     console.error(error.message);
     return throwError('A data error occurred, please try again.');

@@ -40,7 +40,7 @@ h2 {
 .favorite {
   width: 24px;
   height: 24px;
-  fill: #bdc2c5;
+  fill:  #45bf94;
   cursor: pointer;
 }
 .favorite.is-favorite {
@@ -51,6 +51,12 @@ h2 {
 }
 .favorite.is-favorite.is-favorite-hovering {
     fill: #ec4342;
+}
+.notfavorite {
+  width: 24px;
+  height: 24px;
+  fill: #bdc2c5;
+  cursor: pointer;
 }
 .delete {
   display: block;
